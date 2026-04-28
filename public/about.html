@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>À propos - Blog Laravel API</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header class="bg-light p-4">
+            <div class="container">
+                <h1>Documentation de l'API du Blog Laravel</h1>
+            </div>
+        </header>
+        <main class="container mt-4">
+            <section class="mb-4">
+                <h2>Introduction</h2>
+                <p>
+                    Cette API permet de gérer un blog en Laravel en fournissant
+                    des fonctionnalités telles que l'authentification, la
+                    gestion des articles, la recherche, la gestion des favoris,
+                    et les catégories.
+                </p>
+            </section>
+            <section class="mb-4">
+                <h2>Endpoints de l'API</h2>
+                <h3>Authentification</h3>
+                <ul>
+                    <li>
+                        <code>POST /api/login</code> - Authentification
+                        utilisateur (JSON: login, password)
+                    </li>
+                </ul>
+                <h3>Articles</h3>
+                <ul>
+                    <li><code>GET /api/articles</code> - Liste des articles</li>
+                    <li>
+                        <code>GET /api/articles/{id}</code> - Détails d'un
+                        article
+                    </li>
+                    <li>
+                        <code>GET /api/readTime</code> - Temps de lecture des
+                        articles
+                    </li>
+                </ul>
+                <h3>Favoris</h3>
+                <ul>
+                    <li>
+                        <code>POST /api/articles/favorite/{id}</code> - Ajouter
+                        un article aux favoris
+                    </li>
+                    <li>
+                        <code>GET /api/article/favorites</code> - Liste des
+                        favoris
+                    </li>
+                    <li>
+                        <code>DELETE /api/articles/favorite/{id}</code> -
+                        Supprimer un article des favoris
+                    </li>
+                    <li>
+                        <code>GET /api/favorites</code> - Liste des favoris
+                        (Ajax)
+                    </li>
+                    <li>
+                        <code>POST /api/favorites/add/{id}</code> - Ajouter un
+                        article aux favoris (Ajax)
+                    </li>
+                    <li>
+                        <code>POST /api/favorites/remove/{id}</code> - Supprimer
+                        un article des favoris (Ajax)
+                    </li>
+                    <li>
+                        <code>POST /api/favorites/clear</code> - Vider la liste
+                        des favoris (Ajax)
+                    </li>
+                </ul>
+                <h3>Recherche</h3>
+                <ul>
+                    <li>
+                        <code
+                            >GET
+                            /api/search?keyword=mot1&category=exemple&readmin=X&readmax=Y</code
+                        >
+                        - Rechercher des articles avec des mots-clés et une
+                        catégorie et un temps de lecture.
+                    </li>
+                </ul>
+                <h3>Catégories</h3>
+                <ul>
+                    <li>
+                        <code>GET /api/category</code> - Liste des catégories
+                    </li>
+                </ul>
+            </section>
+            <section class="mb-4">
+                <h2>Spécifications Techniques</h2>
+                <ul>
+                    <li>Framework: Laravel</li>
+                    <li>Base de données: MySQL</li>
+                    <li>Architecture: MVC</li>
+                    <li>Gestion des favoris via SESSION/COOKIE et AJAX</li>
+                </ul>
+            </section>
+            <section class="mb-4">
+                <h2>Exemples de Requêtes</h2>
+                <pre>
+                // Authentification
+                fetch('/api/login', {
+                    method: 'POST',
+                    body: JSON.stringify({ login: 'user', password: 'user' })
+                });
+
+                //Search with keywords and read time.
+                fetch('/api/search?keyword=laravel,api,blog&readmin=5&readmax=15')
+            </pre
+                >
+            </section>
+            <section class="mb-4">
+                <h2>Dates de Livraison</h2>
+                <ul>
+                    <li>Backend (Laravel API): 10/01/2025</li>
+                    <li>Frontend: 21/03/2025</li>
+                </ul>
+            </section>
+        </main>
+        <footer class="bg-light p-3 text-center">
+            <p>&copy; 2025 Blog Laravel API - Tous droits réservés.</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

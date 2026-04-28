@@ -1,0 +1,71 @@
+@media (max-width: 768px) {
+    /* Adjust breakpoint as needed */
+
+    /* Example adjustments for mobile */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: stretch; /* Make them full width */
+    }
+
+    nav li {
+        width: 100%; /* Full width list items */
+        text-align: center; /* Center the text */
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 1.2em; /* Smaller font sizes */
+    }
+
+    /* Example: Make tables scrollable */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Example: adjust the padding of the header and footer */
+    header,
+    footer {
+        padding: 10px;
+    }
+    .side-content {
+        width: 100%;
+    }
+    .side-panel-close {
+        display: inline;
+    }
+    #close-panel {
+        width: 34px;
+        height: 34px;
+        cursor: pointer;
+        position: fixed;
+        top: 11px;
+        right: 9px;
+        z-index: 111111111;
+        display: none;
+    }
+    .show {
+        display: inline !important;
+    }
+    #banner {
+        padding: 1rem !important;
+    }
+    .banner-content {
+        flex-direction: column !important;
+    }
+    .banner-left-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .banner-left-content img {
+        width: 120px !important;
+    }
+}
