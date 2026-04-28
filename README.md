@@ -51,3 +51,7 @@ npm run dev
 
 Sami Fadel  
 Final-year Application Development Student – ISFCE Brussels
+
+## Screenshot
+
+![Application screenshot](screenshots/Home.png)
